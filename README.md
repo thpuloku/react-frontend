@@ -1,4 +1,6 @@
 # pragmateam-codeAssesment-frontend
+please get the branch of test-assesment in both module
+
 ○ Highlights of my improvements (tests and others you choose)
 
 *According to the user requirement ,o minimum ,maximum temperature and passed API response(temperature filed),
