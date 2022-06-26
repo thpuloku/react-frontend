@@ -45,11 +45,31 @@ const data = [
 function Item() {
     const [items, setItems] = useState([]);
 
+    // useEffect(() => {
+    //     const request = () =>
+    //         data.forEach((product) => {
+    //             fetch(`http://localhost:8081/temperature/${product.id}`)
+    //                 .then((response) => response.json())
+    //                 .then((response) =>
+    //                     setItems((prevItems) => ({
+    //                         ...prevItems,
+    //                         [product.id]: {
+    //                             ...product,
+    //                             ...response,
+    //                         },
+    //                     }))
+    //                 );
+    //         });
+    //
+    //     setInterval(request, 5000);
+    //
+    //     request();
+    // }, []);
     useEffect(() => {
-        const request = () =>
+
+        const itemsPromises =
             data.forEach((product) => {
                 fetch(`http://localhost:8081/temperature/${product.id}`)
-                    .then((response) => response.json())
                     .then((response) =>
                         setItems((prevItems) => ({
                             ...prevItems,
@@ -61,9 +81,17 @@ function Item() {
                     );
             });
 
-        setInterval(request, 5000);
+        const request = async () => {
+            try {
+                await Promise.all(itemsPromises);
+                setInterval(request, 5000);
 
-        request();
+                request();
+            } catch (error) {
+                console.log("error", error);
+            }
+
+        }
     }, []);
 
     return (

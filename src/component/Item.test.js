@@ -23,64 +23,6 @@ afterEach(() => {
 
 test("when mock the child component it must have table body", () => {
     const { queryAllByTestId } = render(<Item />, container);
-    expect(queryAllByTestId("mockTableData")).toHaveLength(0);
-});
-
-test("when mock the child component it must have table body", () => {
-    const { queryAllByTestId } = render(<Item />, container);
     expect(queryAllByTestId("item-list-tableBody")).toHaveLength(1);
 });
 
-// // test("when mock the", () => {
-// //   const { getByTestId } = render(<Item />);
-// //   // expect(mockTableData).not.toHaveBeenCalled();
-// //
-// //   expect(getByTestId("test-data-testid").textContent).toEqual(
-// //     "Table Data is there"
-// //   );
-// // });
-//
-
-// // const mockTableData = jest.fn();
-// //
-// // jest.mock("../component/TableData", () => (props) => {
-// //   mockTableData();
-// //   return <mock-tableData />;
-// // });
-// //
-// // jest.mock("../component/api", () => ({ apiGetMethod: jest.fn() }));
-// // apiGetMethod.mockImplementation(() => Promise.all.resolve("test1234"));
-// // test("when mock the", () => {
-// //   render(<Item />);
-// //   expect(mockTableData).not.toHaveBeenCalled();
-// // });
-// //
-//jest.mock("../component/api", () => ({ apiGetMethod: jest.fn() }));
-//apiGetMethod.mockImplementation(() => Promise.all.resolve("test1234"));
-
-// // test("when mock the", () => {
-// //   const { getByTestId } = render(<Item />);
-// //   // expect(mockTableData).not.toHaveBeenCalled();
-// //
-// //   expect(getByTestId("test-data-testid").textContent).toEqual(
-// //     "Table Data is there"
-// //   );
-// // });
-//
-
-// // const mockTableData = jest.fn();
-// //
-// // jest.mock("../component/TableData", () => (props) => {
-// //   mockTableData();
-// //   return <mock-tableData />;
-// // });
-// //
-// // jest.mock("../component/api", () => ({ apiGetMethod: jest.fn() }));
-// // apiGetMethod.mockImplementation(() => Promise.all.resolve("test1234"));
-// // test("when mock the", () => {
-// //   render(<Item />);
-// //   expect(mockTableData).not.toHaveBeenCalled();
-// // });
-// //
-//jest.mock("../component/api", () => ({ apiGetMethod: jest.fn() }));
-//apiGetMethod.mockImplementation(() => Promise.all.resolve("test1234"));
