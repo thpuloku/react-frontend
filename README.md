@@ -1,4 +1,4 @@
-# pragmateam-codeAssesment-frontend
+# prag-code-frontend
 please get the branch of test-assesment in both module
 
 ○ Highlights of my improvements (tests and others you choose)
