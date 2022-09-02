@@ -16,22 +16,3 @@ keep that mind it is needed to reuse them , That is a one of the advantage of se
 but i couldn't complete it.
 
 
-○ What would I improve next if I had more time?
--implement more test cases in Item.test.js
-move the fetch request(`http://localhost:8081/temperature/${product.id}`) from frontend to backend and data to backend Node module and do the operation in backend and pass 
-all data set to frontend module. implement a new backend call as (`http://localhost:8081/temperature/all`) calling from front end and 
-from backend it return  Api call and data mapping 
-and return all data which is need to populate the table body
-- implement set of Promises(set of API calls) and  Promise.all() 
-- Implement test cases for mocking api call  in node module
-- implement more test cases in Item.test.js
-- Exception handling and showed info message in UI
-
-
-○ Questions you would ask and your own answers and assumptions
--Assumed that API call always return a success
--how 
-
-○ Any other notes you feel relevant to evaluate your test improvements.
- - need to install uuid when generating key to <TableData>
- -please get the branch of 'test-assesment' in both module
